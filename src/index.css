@@ -25,6 +25,11 @@ header nav ul li a:hover {
   color: rgb(217, 198, 171);
 }
 
+#orderBtn {
+  padding: 10px 20px;
+  background-color: green;
+}
+
 .hero {
   background-image: url("https://picsum.photos/1500/600");
   background-size: cover;
@@ -38,6 +43,9 @@ header nav ul li a:hover {
 .contact {
   padding: 40px 20px;
   text-align: center;
+}
+.menu ul li {
+  list-style-type: none;
 }
 
 .contact form {
@@ -63,4 +71,45 @@ header nav ul li a:hover {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.footer-content {
+  background-color: #062703c7;
+  color: white;
+  padding: 70px 20px;
+}
+.footer-info {
+}
+
+.footer-info nav ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+}
+
+.footer-info nav ul li a {
+  color: rgb(207, 197, 194);
+  text-decoration: none;
+}
+.footer-info nav ul li a:hover {
+  text-decoration: underline;
+  color: rgb(48, 215, 2);
+}
+
+.footer-logo {
+  float: left;
+  position: relative;
+  top: -50px;
+}
+
+.footer-adress {
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+}
+
+.footer-media {
+  float: right;
+  position: relative;
+  top: -140px;
 }

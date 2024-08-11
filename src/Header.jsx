@@ -20,6 +20,7 @@ const Header = () => {
           <li>
             <a href="#contact">Contact</a>
           </li>
+          <button id="orderBtn">Order online</button>
         </ul>
       </nav>
     </header>
