@@ -10,6 +10,7 @@ const Footer = () => {
         <p>
           221B Baker St, Marylebone, London NW1 6XE, UK
           <br />
+          <br />
           Phone: +44 111 222 1234 <br />
           E-mail: restaurant@fake.com
         </p>

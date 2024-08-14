@@ -6,20 +6,24 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #9b8989;
   color: white;
   padding: 10px 20px;
 }
+
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 130px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 header nav ul li a {
   color: white;
   text-decoration: none;
 }
+
 header nav ul li a:hover {
   text-decoration: underline;
   color: rgb(217, 198, 171);
@@ -28,14 +32,29 @@ header nav ul li a:hover {
 #orderBtn {
   padding: 10px 20px;
   background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .hero {
   background-image: url("https://picsum.photos/1500/600");
   background-size: cover;
   color: white;
-  padding: 100px, 20px;
+  padding: 100px 20px;
   text-align: center;
+}
+
+.menu {
+  background-color: #c7b6b6;
+}
+
+.about {
+  background-color: rgb(187, 244, 103);
+}
+
+.contact {
+  background-color: rgb(129, 204, 204);
 }
 
 .menu,
@@ -44,6 +63,7 @@ header nav ul li a:hover {
   padding: 40px 20px;
   text-align: center;
 }
+
 .menu ul li {
   list-style-type: none;
 }
@@ -52,6 +72,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
 
 .contact input,
@@ -64,9 +85,8 @@ header nav ul li a:hover {
 
 .contact button {
   padding: 10px 20px;
-  width: 20%;
-  display: block;
-  margin: 0 auto;
+  width: 50%;
+  max-width: 200px;
   background-color: #333;
   color: white;
   border: none;
@@ -76,40 +96,82 @@ header nav ul li a:hover {
 .footer-content {
   background-color: #062703c7;
   color: white;
-  padding: 70px 20px;
+  padding: 40px 20px;
 }
+
 .footer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .footer-info nav ul {
   list-style: none;
   display: flex;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .footer-info nav ul li a {
   color: rgb(207, 197, 194);
   text-decoration: none;
 }
+
 .footer-info nav ul li a:hover {
   text-decoration: underline;
   color: rgb(48, 215, 2);
 }
 
-.footer-logo {
-  float: left;
-  position: relative;
-  top: -50px;
-}
-
-.footer-adress {
-  position: relative;
-  top: -50px;
-  box-sizing: border-box;
-}
-
+.footer-logo,
+.footer-adress,
 .footer-media {
-  float: right;
+  text-align: center;
+  margin: 20px 0;
   position: relative;
-  top: -140px;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  header nav ul {
+    gap: 100px;
+  }
+
+  .footer-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    text-align: left;
+  }
+
+  .footer-media {
+    text-align: right;
+  }
+
+  .footer-adress {
+    text-align: center;
+  }
+
+  .footer-media {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header nav ul {
+    gap: 130px;
+  }
+
+  .contact button {
+    width: 20%;
+  }
+
+  .footer-info nav ul {
+    gap: 50px;
+  }
 }
