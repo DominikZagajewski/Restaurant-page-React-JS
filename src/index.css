@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 18px; /* Mniejszy rozmiar dla lepszej responsywności */
 }
 
 header {
@@ -14,7 +15,7 @@ header {
 header nav ul {
   list-style: none;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -41,7 +42,7 @@ header nav ul li a:hover {
   background-image: url("https://picsum.photos/1500/600");
   background-size: cover;
   color: white;
-  padding: 100px 20px;
+  padding: 50px 20px; /* Zmniejszone paddingi na mniejszych ekranach */
   text-align: center;
 }
 
@@ -51,6 +52,26 @@ header nav ul li a:hover {
 
 .about {
   background-color: rgb(187, 244, 103);
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.about h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about p {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.about img {
+  float: left;
+  margin-right: 20px; /* Mniejszy odstęp między obrazem a tekstem */
+  margin-bottom: 20px; /* Mniejszy dolny odstęp */
+  max-width: 100%;
+  height: auto;
 }
 
 .contact {
@@ -97,21 +118,52 @@ header nav ul li a:hover {
   background-color: #062703c7;
   color: white;
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-info {
   display: flex;
-  flex-direction: column;
+  justify-content: space-around; /* Większy odstęp między elementami */
   align-items: center;
+  width: 100%;
   gap: 20px;
+  font-size: 14px; /* Większy font dla lepszej czytelności */
+  margin-top: 20px;
+}
+
+.footer-logo,
+.footer-adress,
+.footer-media {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.footer-adress p,
+.footer-media p {
+  margin: 0;
+}
+
+.footer-info hr {
+  border: 1px solid rgba(207, 197, 194, 0.5);
+  width: 100%;
+  margin: 20px 0;
 }
 
 .footer-info nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
+  padding: 0;
 }
 
 .footer-info nav ul li a {
@@ -124,54 +176,35 @@ header nav ul li a:hover {
   color: rgb(48, 215, 2);
 }
 
-.footer-logo,
-.footer-adress,
-.footer-media {
-  text-align: center;
+.footer-content hr {
+  height: 1px;
+  background-color: rgba(207, 197, 194, 0.5);
+  border: none;
+  width: 100%;
   margin: 20px 0;
-  position: relative;
-  top: 0;
 }
 
 @media (min-width: 768px) {
-  header nav ul {
-    gap: 100px;
-  }
-
   .footer-info {
-    flex-direction: row;
+    flex-direction: row; /* Rozkłada elementy w jednym rzędzie na większych ekranach */
     justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .footer-logo {
-    text-align: left;
-  }
-
-  .footer-media {
-    text-align: right;
-  }
-
-  .footer-adress {
-    text-align: center;
-  }
-
-  .footer-media {
-    position: relative;
-    top: 0;
   }
 }
 
 @media (min-width: 1024px) {
-  header nav ul {
-    gap: 130px;
+  body {
+    font-size: 20px; /* Nieco większy font na większych ekranach */
   }
 
-  .contact button {
-    width: 20%;
+  header nav ul {
+    gap: 30px;
+  }
+
+  .hero {
+    padding: 80px 20px;
   }
 
   .footer-info nav ul {
-    gap: 50px;
+    gap: 30px;
   }
 }

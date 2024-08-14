@@ -19,9 +19,8 @@ const Footer = () => {
         <p>Follow us on:</p>
       </div>
 
+      <hr />
       <div className="footer-info">
-        <hr />
-        <p></p>
         <nav>
           <ul>
             <li>
